@@ -68,11 +68,23 @@ h3 {
   align-items:center;
   justify-content:center;
   vertical-align:center;
+  height:fit-content;
 }
 
 .big-letter {
   font-size:min(8em,12.5vw);
-  /* display:inline; */
+  line-height: 1em;
+}
+
+.rules {
+  margin-top:10px;
+  font-size:min(1.5em,4vw);
+}
+
+.rules:hover {
+  cursor:pointer;
+  color:#f4e4c5;
+  text-shadow: 0px 0px 4px #E6C383;
 }
 
 .scoreboard {
@@ -102,14 +114,24 @@ h3 {
   justify-content:center;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity:0
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 .card {
-  padding: 15px;
+  padding: 8px 15px 15px 15px;
   flex:1;
   text-align:center;
   border:1px solid #B0B1AD;
   border-radius:4px;
   background: linear-gradient(to top, #585648, #14150F);
   height:200px;
+  animation: fadeIn 1s;
 }
 
 .card:hover {
@@ -143,8 +165,8 @@ h3 {
 }
 
 .modal-window {
-  width:min(350px, 80%);
-  background-color: #14150F;
+  width:min(300px, 80%);
+  background-color: #161616;
   font-family: 'Montserrat';
   font-size:1.1em;
   line-height:1.5em;
@@ -152,18 +174,20 @@ h3 {
   display:flex;
   flex-direction:column;
   gap:10px;
-  padding:15px;
-  border:1px solid #B0B1AD;
+  padding:20px 30px 20px 30px;
+  /* border:1px solid #B0B1AD; */
   justify-content:center;
   align-items:center;
-  border-radius:5px;
+  /* border-radius:5px; */
+  color: #B0B1AD;
+  box-shadow:0px 0px 20px black;
 }
 
 button {
   width:fit-content;
   background-color:black;
-  border:1px solid white;
-  color:white;
+  border:1px solid #B0B1AD;
+  color: #B0B1AD;
   padding:8px 12px 8px 12px;
   border-radius:3px;
 }

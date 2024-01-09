@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {useEffect} from 'react'
 import Cards from './Cards.jsx'
 import Score from './Score.jsx'
+import Rules from './Rules.jsx'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -9,6 +10,12 @@ function App() {
   const latestTopScore = localStorage.getItem("top-score") ? localStorage.getItem("top-score") : 0
   const [score, setScore] = useState(0)
   const [topScore, setTopScore] = useState(latestTopScore)
+  const [showRules, setShowRules] = useState(false)
+
+  function toggleRules() {
+    const toggleState = showRules === false ? true : false
+    setShowRules(toggleState)
+  }
 
   function incrementScore() {
     if (score+1 > topScore) updateTopScore(score+1)
@@ -42,15 +49,11 @@ function App() {
 
   return (
     <>
-      <div className="modal">
-        <div className="modal-window">
-          <p>Here is some text! Congratulations on reading the text.</p>
-          <button>OK</button>
-        </div>
-      </div>
+      {showRules && <Rules closeRules={() => toggleRules()}/>}
       <Score score={score} topScore={topScore}/>
       <div className="title"><div className="big-letter">E</div><h1>LDEN RIN</h1><div className="big-letter">G</div></div>
       <h2>MEMORY GAME</h2>
+      <h3 className="rules" onClick={() => toggleRules()}>RULES</h3>
       {loading && <div>Loading...</div>}
       {!loading && <Cards array={weaponData} incrementScore={incrementScore} resetScore={resetScore}/>}
     </>
