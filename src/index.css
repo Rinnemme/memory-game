@@ -1,7 +1,6 @@
-
-/* * {
-  font-family: 'Mantinia Regular';
-} */
+*:hover {
+  cursor:default;
+}
 
 body {
   width:100vw;
@@ -41,7 +40,7 @@ h2,
   color: #E6C383;
   font-weight:200;
   letter-spacing:4px;
-  text-shadow: 0px 0px 4px #E6C383;;
+  text-shadow: 0px 0px 4px #E6C383;
   margin:0;
   padding:0;
   font-family: 'Mantinia Regular';
@@ -117,7 +116,7 @@ h3 {
   cursor:pointer;
   scale:1.03;
   transition:0.2s ease-in;
-  background: linear-gradient(to top, #413f37, #000000)
+  background: linear-gradient(to top, #413f37, #000000);
 }
 
 .card>img {
@@ -128,4 +127,48 @@ h3 {
   font-size: min(1.3em, 3.5vw);
   color: #B0B1AD;
   font-weight:light;
+}
+
+.modal {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#b0b1ad96;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.modal-window {
+  width:min(350px, 80%);
+  background-color: #14150F;
+  font-family: 'Montserrat';
+  font-size:1.1em;
+  line-height:1.5em;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:15px;
+  border:1px solid #B0B1AD;
+  justify-content:center;
+  align-items:center;
+  border-radius:5px;
+}
+
+button {
+  width:fit-content;
+  background-color:black;
+  border:1px solid white;
+  color:white;
+  padding:8px 12px 8px 12px;
+  border-radius:3px;
+}
+
+button:hover {
+  cursor:pointer;
+  background-color: #413f37;
 }

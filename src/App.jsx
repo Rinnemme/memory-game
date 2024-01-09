@@ -42,6 +42,12 @@ function App() {
 
   return (
     <>
+      <div className="modal">
+        <div className="modal-window">
+          <p>Here is some text! Congratulations on reading the text.</p>
+          <button>OK</button>
+        </div>
+      </div>
       <Score score={score} topScore={topScore}/>
       <div className="title"><div className="big-letter">E</div><h1>LDEN RIN</h1><div className="big-letter">G</div></div>
       <h2>MEMORY GAME</h2>
