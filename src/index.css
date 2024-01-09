@@ -131,7 +131,7 @@ h3 {
   border-radius:4px;
   background: linear-gradient(to top, #585648, #14150F);
   height:200px;
-  animation: fadeIn 1s;
+  animation: fadeIn 2s;
 }
 
 .card:hover {
@@ -139,6 +139,10 @@ h3 {
   scale:1.03;
   transition:0.2s ease-in;
   background: linear-gradient(to top, #413f37, #000000);
+}
+
+.card>*:hover {
+  cursor:pointer;
 }
 
 .card>img {

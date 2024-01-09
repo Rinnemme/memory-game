@@ -40,12 +40,12 @@ function Cards ({array, incrementScore, resetScore}) {
     return (
         <div className="card-container">
             {indexes.length>0 && indexes.map((index) => {
-                return <div key={array[index].id} className="card">
+                return <div key={array[index].id} className="card" onClick = {() => {
+                    processID(array[index].id)
+                    displayRandomCards()
+                }}>
                 <p>{array[index].name}</p>
-                <img src = {array[index].image} onClick = {() => {
-                        processID(array[index].id)
-                        displayRandomCards()
-                    }}></img>
+                <img src = {array[index].image}></img>
                 </div>
             })}
         </div>
