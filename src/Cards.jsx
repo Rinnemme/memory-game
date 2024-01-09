@@ -28,7 +28,7 @@ function Cards ({array, incrementScore, resetScore}) {
     
     function displayRandomCards() {
         const newIndexes = []
-        while (newIndexes.length < 10) {
+        while (newIndexes.length < 5) {
             const number = Math.floor(Math.random()*array.length)
             if (!newIndexes.includes(number)) {
                 newIndexes.push(number)
@@ -38,17 +38,17 @@ function Cards ({array, incrementScore, resetScore}) {
     }
 
     return (
-        <>
-        {indexes.length>0 && indexes.map((index) => {
-            return <div key={array[index].id}>
-            <p>{array[index].name}</p>
-            <img src = {array[index].image} onClick = {() => {
-                    processID(array[index].id)
-                    displayRandomCards()
-                }}></img>
-            </div>
-        })}
-        </>
+        <div className="card-container">
+            {indexes.length>0 && indexes.map((index) => {
+                return <div key={array[index].id} className="card">
+                <p>{array[index].name}</p>
+                <img src = {array[index].image} onClick = {() => {
+                        processID(array[index].id)
+                        displayRandomCards()
+                    }}></img>
+                </div>
+            })}
+        </div>
     )
 }
 

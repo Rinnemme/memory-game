@@ -1,68 +1,131 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+/* * {
+  font-family: 'Mantinia Regular';
+} */
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width:100vw;
+  min-height:100vh;
+  margin: 0px;
+  background-color:black;
+}
+
+#root {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/elden-ring-background.png');
+  background-size:90%;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  width:100%;
+  min-height:100vh;
+  align-items:center;
+  justify-content:center;
+}
+
+@font-face {
+  font-family: 'Mantinia Regular';
+  src: url('./assets/mantinia-regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./src/assets/Montserrat-VariableFont_wght.ttf') format('ttf')
+}
+
+h1,
+h2, 
+.big-letter {
+  color: #E6C383;
+  font-weight:200;
+  letter-spacing:4px;
+  text-shadow: 0px 0px 4px #E6C383;;
+  margin:0;
+  padding:0;
+  font-family: 'Mantinia Regular';
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size:min(6em,10vw);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+h2 {
+  font-size:min(3em, 5vw);
+  color:white;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+h3 {
+  margin:0;
+  font-size:1em;
+  font-weight:200;
+  font-family:'Montserrat';
+}
+
+.title {
+  margin-top:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  vertical-align:center;
+}
+
+.big-letter {
+  font-size:min(8em,12.5vw);
+  /* display:inline; */
+}
+
+.scoreboard {
+  position:sticky;
+  display:flex;
+  flex-direction:column;
+  font-family: 'Montserrat';
+  gap:5px;
+  border:1px solid #B0B1AD;
+  background-color: #14150F;
+  top:20px;
+  padding:12px;
+  z-index:2;
+  margin-bottom:10px;
+  height:45px;
+}
+
+.card-container {
+  width:80%;
+  gap:20px;
+  display:grid;
+  margin-top:50px;
+  margin-bottom:50px;
+  grid-template-columns: repeat(auto-fit, 180px);
+  width:80%;
+  align-items:center;
+  justify-content:center;
+}
+
+.card {
+  padding: 15px;
+  flex:1;
+  text-align:center;
+  border:1px solid #B0B1AD;
+  border-radius:4px;
+  background: linear-gradient(to top, #585648, #14150F);
+  height:200px;
+}
+
+.card:hover {
+  cursor:pointer;
+  scale:1.03;
+  transition:0.2s ease-in;
+  background: linear-gradient(to top, #413f37, #000000)
+}
+
+.card>img {
+  width:80%;
+}
+
+.card>p {
+  font-size: min(1.3em, 3.5vw);
+  color: #B0B1AD;
+  font-weight:light;
 }

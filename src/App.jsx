@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import {useEffect} from 'react'
-import './App.css'
 import Cards from './Cards.jsx'
 import Score from './Score.jsx'
 
@@ -44,7 +43,9 @@ function App() {
   return (
     <>
       <Score score={score} topScore={topScore}/>
-      {loading && <div>Loading...</div>}=
+      <div className="title"><div className="big-letter">E</div><h1>LDEN RIN</h1><div className="big-letter">G</div></div>
+      <h2>MEMORY GAME</h2>
+      {loading && <div>Loading...</div>}
       {!loading && <Cards array={weaponData} incrementScore={incrementScore} resetScore={resetScore}/>}
     </>
   )

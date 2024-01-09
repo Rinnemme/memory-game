@@ -2,10 +2,10 @@
 
 function Score ({score, topScore}) {
     return (
-        <>
-            <h2>Score: {score}</h2>
-            <h2>Top Score: {topScore}</h2>
-        </>
+        <div className="scoreboard">
+            <h3>Current arsenal: {score} weapons</h3>
+            <h3>Largest arsenal: {topScore} weapons</h3>
+        </div>
     )
 }
 
