@@ -55,7 +55,7 @@ function Cards ({array, incrementScore, gameOver}) {
         }
         while (newIndexes.length < 5) {
             const index = randomIndexFrom(array)
-            if (!newIndexes.includes(index) && indexes[newIndexes.length]!==index) {
+            if (!newIndexes.includes(index)) {
                 newIndexes.push(index)
                 }
             }
