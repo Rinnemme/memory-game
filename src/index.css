@@ -143,11 +143,11 @@ h3 {
 }
 
 .fade-in {
-  animation: fadeIn 2s;
+  animation: fadeIn 0.25s;
 }
 
 .fade-out {
-  animation: fadeOut 2s
+  animation: fadeOut 0.25s
 }
 
 .card:hover {

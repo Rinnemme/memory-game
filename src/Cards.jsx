@@ -73,7 +73,9 @@ function Cards ({array, incrementScore, gameOver}) {
             {indexes.length>0 && indexes.map((index) => {
                 return <div key={array[index].id} className='card' onClick = {() => {
                     processID(array[index].id)
-                    getNewCardIndexes()
+                    document.getElementById('card-container').className='fade-out'
+                    setTimeout(() => {document.getElementById('card-container').className='fade-in'}, 200)
+                    setTimeout(() => getNewCardIndexes(), 200)
                 }}>
                 <p>{array[index].name}</p>
                 <img src = {array[index].image}></img>
