@@ -102,7 +102,7 @@ h3 {
   height:45px;
 }
 
-.card-container {
+#card-container {
   width:80%;
   gap:20px;
   display:grid;
@@ -123,6 +123,15 @@ h3 {
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity:1
+  }
+  100% {
+    opacity:0;
+  }
+}
+
 .card {
   padding: 8px 15px 15px 15px;
   flex:1;
@@ -131,7 +140,14 @@ h3 {
   border-radius:4px;
   background: linear-gradient(to top, #585648, #14150F);
   height:200px;
+}
+
+.fade-in {
   animation: fadeIn 2s;
+}
+
+.fade-out {
+  animation: fadeOut 2s
 }
 
 .card:hover {

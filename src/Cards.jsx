@@ -14,6 +14,12 @@ function Cards ({array, incrementScore, gameOver}) {
         setClickedIDs([...clickedIDs, id])
     }
 
+    function itemAtSameIndex(arr1, arr2) {
+        for (let i=0; i<5; i++) {
+            if (arr1[i] === arr2[i]) return true
+        } return false
+    }
+
     function processID(id) {
         if (clickedIDs.includes(id)) {
             resetClickedIDs()
@@ -58,13 +64,14 @@ function Cards ({array, incrementScore, gameOver}) {
                 }
             }
         shuffle(newIndexes)
+        while(itemAtSameIndex(newIndexes,indexes)) shuffle(newIndexes)
         setIndexes(newIndexes)
     }
 
     return (
-        <div className="card-container">
+        <div id='card-container'>
             {indexes.length>0 && indexes.map((index) => {
-                return <div key={array[index].id} className="card" onClick = {() => {
+                return <div key={array[index].id} className='card' onClick = {() => {
                     processID(array[index].id)
                     getNewCardIndexes()
                 }}>
