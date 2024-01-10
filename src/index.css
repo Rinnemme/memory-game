@@ -3,25 +3,25 @@
 }
 
 body {
-  width:100vw;
-  min-height:100vh;
-  margin: 0px;
   background-color:black;
+  margin: 0px;
+  min-height:100vh;
+  width:100vw;
 }
 
 #root {
+  align-items:center;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/elden-ring-background.png');
-  background-size:90%;
+  background-attachment: fixed;
   background-position:center;
   background-repeat:no-repeat;
-  background-attachment: fixed;
+  background-size:90%;
   color:white;
   display:flex;
   flex-direction:column;
-  width:100%;
-  min-height:100vh;
-  align-items:center;
   justify-content:center;
+  min-height:100vh;
+  width:100%;
 }
 
 @font-face {
@@ -38,12 +38,12 @@ h1,
 h2, 
 .big-letter {
   color: #E6C383;
+  font-family: 'Mantinia Regular';
   font-weight:200;
   letter-spacing:4px;
-  text-shadow: 0px 0px 4px #E6C383;
   margin:0;
   padding:0;
-  font-family: 'Mantinia Regular';
+  text-shadow: 0px 0px 4px #E6C383;
 }
 
 h1 {
@@ -51,24 +51,24 @@ h1 {
 }
 
 h2 {
-  font-size:min(3em, 5vw);
   color:white;
+  font-size:min(3em, 5vw);
 }
 
 h3 {
   margin:0;
+  font-family:'Montserrat';
   font-size:1em;
   font-weight:200;
-  font-family:'Montserrat';
 }
 
 .title {
-  margin-top:20px;
-  display:flex;
   align-items:center;
-  justify-content:center;
-  vertical-align:center;
+  display:flex;
   height:fit-content;
+  justify-content:center;
+  margin-top:20px;
+  vertical-align:center;
 }
 
 .big-letter {
@@ -77,41 +77,40 @@ h3 {
 }
 
 .rules {
-  margin-top:10px;
   font-size:min(1.5em,4vw);
+  margin-top:10px;
 }
 
 .rules:hover {
-  cursor:pointer;
   color:#f4e4c5;
+  cursor:pointer;
   text-shadow: 0px 0px 4px #E6C383;
 }
 
 .scoreboard {
-  position:sticky;
+  background-color: #14150F;
+  border:1px solid #B0B1AD;
   display:flex;
   flex-direction:column;
   font-family: 'Montserrat';
   gap:5px;
-  border:1px solid #B0B1AD;
-  background-color: #14150F;
-  top:20px;
-  padding:12px;
-  z-index:2;
-  margin-bottom:10px;
   height:45px;
+  margin-bottom:10px;
+  padding:12px;
+  position:sticky;
+  top:20px;
+  z-index:2;
 }
 
 #card-container {
-  width:80%;
-  gap:20px;
-  display:grid;
-  margin-top:50px;
-  margin-bottom:50px;
-  grid-template-columns: repeat(auto-fit, 180px);
-  width:80%;
   align-items:center;
+  display:grid;
+  gap:20px;
+  grid-template-columns: repeat(auto-fit, 180px);
   justify-content:center;
+  margin-bottom:50px;
+  margin-top:50px;
+  width:80%;
 }
 
 @keyframes fadeIn {
@@ -133,13 +132,13 @@ h3 {
 }
 
 .card {
-  padding: 8px 15px 15px 15px;
-  flex:1;
-  text-align:center;
+  background: linear-gradient(to top, #585648, #14150F);
   border:1px solid #B0B1AD;
   border-radius:4px;
-  background: linear-gradient(to top, #585648, #14150F);
+  flex:1;
   height:200px;
+  padding: 8px 15px 15px 15px;
+  text-align:center;
 }
 
 .fade-in {
@@ -151,10 +150,10 @@ h3 {
 }
 
 .card:hover {
+  background: linear-gradient(to top, #413f37, #000000);
   cursor:pointer;
   scale:1.03;
   transition:0.2s ease-in;
-  background: linear-gradient(to top, #413f37, #000000);
 }
 
 .card>*:hover {
@@ -166,53 +165,51 @@ h3 {
 }
 
 .card>p {
-  font-size: min(1.3em, 3.5vw);
   color: #B0B1AD;
+  font-size: min(1.3em, 3.5vw);
   font-weight:light;
 }
 
 .modal {
+  align-items:center;
+  background-color:#b0b1ad96;
+  display:flex;
+  height:100%;
+  justify-content:center;
+  left:0;
   position:fixed;
   top:0;
-  left:0;
   width:100%;
-  height:100%;
-  background-color:#b0b1ad96;
   z-index:3;
-  display:flex;
-  align-items:center;
-  justify-content:center;
 }
 
 .modal-window {
-  width:min(300px, 80%);
+  align-items:center;
   background-color: #161616;
-  font-family: 'Montserrat';
-  font-size:1.1em;
-  line-height:1.5em;
-  text-align:center;
+  box-shadow:0px 0px 20px black;
+  color: #B0B1AD;
   display:flex;
   flex-direction:column;
+  font-family: 'Montserrat';
+  font-size:1.1em;
   gap:10px;
-  padding:20px 30px 20px 30px;
-  /* border:1px solid #B0B1AD; */
   justify-content:center;
-  align-items:center;
-  /* border-radius:5px; */
-  color: #B0B1AD;
-  box-shadow:0px 0px 20px black;
+  line-height:1.5em;
+  padding:20px 30px 20px 30px;
+  text-align:center;
+  width:min(300px, 80%);
 }
 
 button {
-  width:fit-content;
   background-color:black;
   border:1px solid #B0B1AD;
+  border-radius:3px;
   color: #B0B1AD;
   padding:8px 12px 8px 12px;
-  border-radius:3px;
+  width:fit-content;
 }
 
 button:hover {
-  cursor:pointer;
   background-color: #413f37;
+  cursor:pointer;
 }
