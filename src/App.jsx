@@ -3,6 +3,7 @@ import {useEffect} from 'react'
 import Cards from './Cards.jsx'
 import Score from './Score.jsx'
 import Rules from './Rules.jsx'
+import GameOver from './GameOver.jsx'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -11,6 +12,7 @@ function App() {
   const [score, setScore] = useState(0)
   const [topScore, setTopScore] = useState(latestTopScore)
   const [showRules, setShowRules] = useState(false)
+  const [gameOver, setGameOver] = useState(false)
 
   function toggleRules() {
     const toggleState = showRules === false ? true : false
@@ -22,8 +24,9 @@ function App() {
     setScore(score+1)
   }
 
-  function resetScore() {
+  function replay() {
     setScore(0)
+    setGameOver(false)
   }
 
   function updateTopScore(n) {
@@ -50,12 +53,13 @@ function App() {
   return (
     <>
       {showRules && <Rules closeRules={() => toggleRules()}/>}
+      {gameOver && <GameOver score={score} replay={() => replay()}/>}
       <Score score={score} topScore={topScore}/>
       <div className="title"><div className="big-letter">E</div><h1>LDEN RIN</h1><div className="big-letter">G</div></div>
       <h2>MEMORY GAME</h2>
       <h3 className="rules" onClick={() => toggleRules()}>RULES</h3>
       {loading && <div>Loading...</div>}
-      {!loading && <Cards array={weaponData} incrementScore={incrementScore} resetScore={resetScore}/>}
+      {!loading && <Cards array={weaponData} incrementScore={incrementScore} gameOver={() => setGameOver(true)}/>}
     </>
   )
 }

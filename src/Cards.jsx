@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {useEffect} from 'react'
 
-function Cards ({array, incrementScore, resetScore}) {
+function Cards ({array, incrementScore, gameOver}) {
     const [indexes, setIndexes] = useState([])
     const [clickedIDs, setClickedIDs] = useState([])
 
@@ -16,7 +16,7 @@ function Cards ({array, incrementScore, resetScore}) {
     function processID(id) {
         if (clickedIDs.includes(id)) {
             resetClickedIDs()
-            resetScore()
+            gameOver()
         } else {
             addClickedID(id)
             incrementScore()
