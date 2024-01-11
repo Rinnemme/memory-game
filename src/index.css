@@ -96,7 +96,7 @@ h3 {
   font-family: 'Montserrat';
   gap:5px;
   height:45px;
-  margin-bottom:10px;
+  margin-bottom:30px;
   padding:12px;
   position:sticky;
   top:20px;
@@ -106,7 +106,7 @@ h3 {
 #card-container {
   align-items:center;
   display:grid;
-  gap:15px;
+  gap:20px;
   grid-template-columns: repeat(auto-fit, 160px);
   justify-content:center;
   margin-bottom:50px;
@@ -141,7 +141,7 @@ h3 {
   display:flex;
   flex-direction:column;
   font-size: min(1.2em, 3.5vw);
-  height:170px;
+  height:180px;
   justify-content:space-between;
   padding: 15px 10px 15px 10px;
   text-align:center;
