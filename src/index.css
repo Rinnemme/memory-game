@@ -7,6 +7,7 @@ body {
   margin: 0px;
   min-height:100vh;
   width:100vw;
+  box-sizing:border-box;
 }
 
 #root {
@@ -105,12 +106,12 @@ h3 {
 #card-container {
   align-items:center;
   display:grid;
-  gap:20px;
-  grid-template-columns: repeat(auto-fit, 180px);
+  gap:15px;
+  grid-template-columns: repeat(auto-fit, 160px);
   justify-content:center;
   margin-bottom:50px;
   margin-top:50px;
-  width:80%;
+  width:min(900px, 100%);
 }
 
 @keyframes fadeIn {
@@ -132,12 +133,17 @@ h3 {
 }
 
 .card {
+  align-items:center;
   background: linear-gradient(to top, #585648, #14150F);
   border:1px solid #B0B1AD;
   border-radius:4px;
-  flex:1;
-  height:200px;
-  padding: 8px 15px 15px 15px;
+  color: #B0B1AD;
+  display:flex;
+  flex-direction:column;
+  font-size: min(1.2em, 3.5vw);
+  height:170px;
+  justify-content:space-between;
+  padding: 15px 10px 15px 10px;
   text-align:center;
 }
 
@@ -161,13 +167,13 @@ h3 {
 }
 
 .card>img {
-  width:80%;
+  height:65%;
 }
 
-.card>p {
-  color: #B0B1AD;
-  font-size: min(1.3em, 3.5vw);
-  font-weight:light;
+.card>div {
+  display:flex;
+  align-items:center;
+  height:25%;
 }
 
 .modal {

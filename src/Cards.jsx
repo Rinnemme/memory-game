@@ -77,8 +77,8 @@ function Cards ({array, incrementScore, gameOver}) {
                     setTimeout(() => {document.getElementById('card-container').className='fade-in'}, 200)
                     setTimeout(() => getNewCardIndexes(), 200)
                 }}>
-                <p>{array[index].name}</p>
-                <img src = {array[index].image}></img>
+                    <div>{array[index].name}</div>
+                    <img src = {array[index].image}></img>
                 </div>
             })}
         </div>
