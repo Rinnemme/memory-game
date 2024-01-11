@@ -98,7 +98,7 @@ h3 {
 }
 
 .scoreboard>h3 {
-  font-family:'sans-serif';
+  font-family: sans-serif;
 }
 
 #card-container {
@@ -138,8 +138,8 @@ h3 {
   color: #B0B1AD;
   display:flex;
   flex-direction:column;
-  font-size: min(1.2em, 3.5vw);
-  font-family: 'sans-serif';
+  font-size: min(1.1em, 3.5vw);
+  font-family: sans-serif;
   height:180px;
   justify-content:space-between;
   padding: 15px 10px 15px 10px;
@@ -195,7 +195,7 @@ h3 {
   color: #B0B1AD;
   display:flex;
   flex-direction:column;
-  font-family: 'sans-serif';
+  font-family: sans-serif;
   font-size:1.1em;
   gap:10px;
   justify-content:center;
@@ -210,8 +210,8 @@ button {
   border:1px solid #B0B1AD;
   border-radius:3px;
   color: #B0B1AD;
-  font-family:'Mantinia Regular';
-  font-size:0.9em;
+  font-family:sans-serif;
+  font-size:0.8em;
   padding:8px 12px 8px 12px;
   width:fit-content;
 }
