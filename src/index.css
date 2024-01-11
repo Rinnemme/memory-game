@@ -32,7 +32,7 @@ body {
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('./src/assets/Montserrat-VariableFont_wght.ttf') format('ttf')
+  src: url('./src/assets/Montserrat-VariableFont_wght.ttf') format('opentype')
 }
 
 h1,
@@ -58,7 +58,7 @@ h2 {
 
 h3 {
   margin:0;
-  font-family:'Montserrat';
+  font-family:'Mantinia Regular';
   font-size:1em;
   font-weight:200;
 }
@@ -93,7 +93,6 @@ h3 {
   border:1px solid #B0B1AD;
   display:flex;
   flex-direction:column;
-  font-family: 'Montserrat';
   gap:5px;
   height:45px;
   margin-bottom:30px;
@@ -101,6 +100,10 @@ h3 {
   position:sticky;
   top:20px;
   z-index:2;
+}
+
+.scoreboard>h3 {
+  font-family:'Montserrat';
 }
 
 #card-container {
@@ -141,6 +144,7 @@ h3 {
   display:flex;
   flex-direction:column;
   font-size: min(1.2em, 3.5vw);
+  font-family: 'Sans Serfif';
   height:180px;
   justify-content:space-between;
   padding: 15px 10px 15px 10px;
@@ -203,7 +207,7 @@ h3 {
   line-height:1.5em;
   padding:20px 30px 20px 30px;
   text-align:center;
-  width:min(300px, 80%);
+  width:min(350px, 80%);
 }
 
 button {
@@ -211,6 +215,8 @@ button {
   border:1px solid #B0B1AD;
   border-radius:3px;
   color: #B0B1AD;
+  font-family:'Mantinia Regular';
+  font-size:0.9em;
   padding:8px 12px 8px 12px;
   width:fit-content;
 }
